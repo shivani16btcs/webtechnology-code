@@ -1,0 +1,87 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{	
+	var x=document.forms["frm1"]["pass"].value;
+	var y=document.forms["frm1"]["confirmpassword"].value;
+	if(x.length<8)
+	{
+	alert("password should be 8 character long");
+	return false;
+	}
+	else if(x.localeCompare(y))
+	{
+	alert("password mismatch");
+	return false;
+	}
+}
+</script>
+</head>
+<body bgcolor="cyan">
+
+<table align="center" width="70%" bgcolor="lightyellow">
+
+<th colspan=2>Register Ur Self</th>
+
+
+<tr>
+	<td width="40%">Username</td>
+	<td width="60%"><form name="frm1"action="ab.jsp" method="get" onsubmit="validate();">
+	<input type="text" name="username" placeholder="enter name">
+</tr>
+
+<tr>
+	<td width="40%">Password</td>
+	<td width="60%">
+	<input type="password" name="pass" placeholder="enter password" >
+</tr>
+
+
+
+<tr>
+	<td width="40%">Confirm password</td>
+	<td width="60%">
+	<input type="password" name="confirmpassword" placeholder="enter confirm password">
+</tr>
+<tr>
+	<td width="40%">Email</td>
+	<td width="60%">
+	<input type="email" name="email" placeholder="enter email">
+</tr>
+<tr>
+	<td width="40%">Date of Birth</td>
+	<td width="60%">
+	<input type="date" name="date"placeholder="enter dob">
+</tr>
+<tr>
+	<td width="40%">Gender</td>
+	<td width="60%">
+	<select>
+	<option>MALE</option>
+	<option>female</option>
+	</select>
+	</td>
+</tr>
+<tr>
+	<td width="40%">Address</td>
+	<td width="60%">
+	<textarea cols=20 rows=5 name="address" placeholder="enter address"></textarea>
+<tr>
+	<td width="40%" align="right"><input type="checkbox" name="policy"</td>
+	<td width="60%">	
+	i accept all term and condition.
+	</td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><input type="submit"name="sb" value="register me"></td>
+	<td width="60%">	
+</tr>
+</table>
+</body>
+</html>
+
+
+
+
+
